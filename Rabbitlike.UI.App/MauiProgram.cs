@@ -1,4 +1,7 @@
 ﻿using Microsoft.Extensions.Logging;
+using Rabbitlike.UI.App.Services;
+using Rabbitlike.UI.Shared;
+using Rabbitlike.UI.Shared.Interfaces;
 
 namespace Rabbitlike.UI.App
 {
@@ -6,6 +9,8 @@ namespace Rabbitlike.UI.App
     {
         public static MauiApp CreateMauiApp()
         {
+            InteractiveRenderSettings.ConfigureBlazorHybridRenderModes();
+
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
@@ -20,6 +25,8 @@ namespace Rabbitlike.UI.App
     		builder.Services.AddBlazorWebViewDeveloperTools();
     		builder.Logging.AddDebug();
 #endif
+
+            builder.Services.AddSingleton<IFormFactor, FormFactor>();
 
             return builder.Build();
         }

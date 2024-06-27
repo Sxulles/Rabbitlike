@@ -65,7 +65,12 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Rabbitlike.Service\Rabbitlike.Service.csproj" />
+      <Folder Include="Components\Layout\" />
+      <Folder Include="Components\Pages\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Rabbitlike.UI.Shared\Rabbitlike.UI.Shared.csproj" />
     </ItemGroup>
 
 </Project>
