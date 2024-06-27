@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Rabbitlike.Core\Rabbitlike.Core.csproj" />
+  </ItemGroup>
+
 </Project>

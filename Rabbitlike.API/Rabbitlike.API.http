@@ -1,0 +1,6 @@
+@Rabbitlike.API_HostAddress = http://localhost:5055
+
+GET {{Rabbitlike.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
